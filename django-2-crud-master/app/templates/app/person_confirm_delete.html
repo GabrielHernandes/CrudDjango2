@@ -1,0 +1,10 @@
+{% extends "app/base.html" %}
+{% block title %}Confirm delte person{% endblock %}
+{% block body %}
+<h1>Deletar Pessoa</h1>
+<form method="post">{% csrf_token %}
+
+Tem certeza de que deseja excluir "{{ object }}" ?
+  <input type="submit" value="Submeter" />
+</form>
+{% endblock %}
